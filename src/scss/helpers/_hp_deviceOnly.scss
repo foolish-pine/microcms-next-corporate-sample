@@ -5,17 +5,17 @@
 @use "/scss/global" as *;
 
 .hp_mobileOnly {
-	display: none !important;
+  display: none !important;
 
-	@include mq_max_md {
-		display: block !important;
-	}
+  @include mq_max_md {
+    display: block !important;
+  }
 }
 
 .hp_desktopOnly {
-	display: block !important;
+  display: block !important;
 
-	@include mq_max_md {
-		display: none !important;
-	}
+  @include mq_max_md {
+    display: none !important;
+  }
 }

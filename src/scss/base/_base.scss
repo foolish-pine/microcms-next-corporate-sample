@@ -5,25 +5,25 @@
 @use "/scss/global" as *;
 
 html {
-	overflow-x: hidden;
-	overflow-y: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 body {
-	font-family: $f_yuGothic, sans-serif;
-	font-size: rem(16); // 16px
-	line-height: 1;
-	color: $c_black;
-	overflow-wrap: break-word;
+  font-family: $f_yuGothic, sans-serif;
+  font-size: rem(16); // 16px
+  line-height: 1;
+  color: $c_black;
+  overflow-wrap: break-word;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* stylelint-disable */
