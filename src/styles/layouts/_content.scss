@@ -1,6 +1,4 @@
 /* ----------------------------------
-	hp_ttu
+	コンテンツレイアウト
 ------------------------------------ */
-.hp_ttu {
-  text-transform: uppercase !important;
-}
+@use "@/scss/global" as *;

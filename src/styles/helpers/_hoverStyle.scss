@@ -2,9 +2,9 @@
 	hp_hoverStyle
 	ホバーアクションのスタイル
 ------------------------------------ */
-@use "/scss/global" as *;
+@use "@/scss/global" as *;
 
-.hp_hoverTransparent {
+.hoverTransparent {
   transition: opacity 0.4s !important;
 
   @include mq_hover {

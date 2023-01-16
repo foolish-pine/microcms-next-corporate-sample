@@ -2,9 +2,9 @@
 	hp_deviceOnly
 	画面幅に応じた表示・非表示用スタイル
 ------------------------------------ */
-@use "/scss/global" as *;
+@use "@/scss/global" as *;
 
-.hp_mobileOnly {
+.mobileOnly {
   display: none !important;
 
   @include mq_max_md {
@@ -12,7 +12,7 @@
   }
 }
 
-.hp_desktopOnly {
+.desktopOnly {
   display: block !important;
 
   @include mq_max_md {

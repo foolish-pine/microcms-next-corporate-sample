@@ -1,0 +1,6 @@
+/* ----------------------------------
+	layouts.module.scss
+	layoutsディレクトリのファイルを@forwardしてまとめる
+------------------------------------ */
+@forward "@/scss/layouts/content";
+@forward "@/scss/layouts/header";

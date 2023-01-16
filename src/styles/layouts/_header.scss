@@ -1,15 +1,15 @@
 /* ----------------------------------
 	ヘッダーレイアウト
 ------------------------------------ */
-@use "/scss/global" as *;
+@use "@/scss/global" as *;
 
-.ly_header {
+.header {
   position: fixed;
   width: 100%;
   margin-top: 40px;
 }
 
-.ly_header_inner {
+.header_inner {
   max-width: 960px;
   height: 64px;
   margin-right: auto;

@@ -33,9 +33,9 @@ module.exports = {
     ],
     "scss/selector-no-union-class-name": true, // class名の検索性の低下を防ぐため
     "selector-class-pattern": [
-      "^(cb|el|hp|ly|bl|js|is)_([a-z][a-zA-Z0-9]+)(_[a-z][a-zA-Z0-9]+)*$",
+      "^([a-z][a-zA-Z0-9]+)(_[a-z][a-zA-Z0-9]+)*$",
       {
-        message: "Expected class to be precss-style",
+        message: "Expected class to be snake-case",
       },
     ],
     "selector-id-pattern": [
