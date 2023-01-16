@@ -2,6 +2,6 @@
 	helpers.module.scss
 	helpersディレクトリのファイルを@forwardしてまとめる
 ------------------------------------ */
-@forward "@/scss/helpers/deviceOnly";
-@forward "@/scss/helpers/hoverStyle";
-@forward "@/scss/helpers/ttu";
+@forward "@/styles/helpers/deviceOnly";
+@forward "@/styles/helpers/hoverStyle";
+@forward "@/styles/helpers/ttu";
