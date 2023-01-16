@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@next/font": "13.1.2",
@@ -26,9 +27,26 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3",
     "sass": "^1.57.1",
+    "simple-git-hooks": "^2.8.1",
     "stylelint": "^14.16.1",
     "stylelint-config-recess-order": "^3.1.0",
     "stylelint-config-standard-scss": "^6.1.0"
+  },
+  "lint-staged": {
+    "src/**/*.js,jsx,ts,tsx": [
+      "eslint --fix --quiet"
+    ],
+    "src/**/*.css,scss": [
+      "stylelint --fix --quiet"
+    ],
+    "**/*.json": [
+      "prettier --write --loglevel=error"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
   }
 }
