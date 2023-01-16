@@ -3,6 +3,7 @@ import Image from "next/image";
 import styles from "@/styles/Home.module.css";
 import { client } from "@/libs/client";
 import Link from "next/link";
+import type { News } from "@/types/news";
 
 export const getStaticProps = async () => {
   const data = await client.get({ endpoint: "news" });
@@ -14,7 +15,11 @@ export const getStaticProps = async () => {
   };
 };
 
-export default function Home({ news }) {
+type Props = {
+  news: News[];
+};
+
+export default function Home({ news }: Props) {
   return (
     <div>
       <ul>
