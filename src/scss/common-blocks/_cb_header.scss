@@ -1,0 +1,15 @@
+/* ----------------------------------
+	ヘッダー
+------------------------------------ */
+@use "/scss/global" as *;
+
+.cb_header {
+	display: flex;
+	align-items: center;
+}
+
+.cb_header_logo {
+	font-size: rem(36);
+	line-height: calc(43 / 36);
+	color: $c_white;
+}
