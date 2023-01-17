@@ -4,7 +4,6 @@ export default function Document() {
   return (
     <Html lang="ja">
       <Head>
-        <meta charSet="UTF-8" />
         <meta
           name="format-detection"
           content="email=no,telephone=no,address=no"
