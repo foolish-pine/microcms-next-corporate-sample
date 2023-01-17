@@ -18,10 +18,6 @@
     "@types/react": "18.0.26",
     "@types/react-dom": "18.0.10",
     "destyle.css": "^4.0.0",
-    "eslint": "8.32.0",
-    "eslint-config-next": "13.1.2",
-    "eslint-plugin-import": "^2.27.4",
-    "eslint-plugin-unused-imports": "^2.0.0",
     "microcms-js-sdk": "^2.3.2",
     "next": "13.1.2",
     "next-seo": "^5.15.0",
@@ -30,6 +26,10 @@
     "typescript": "4.9.4"
   },
   "devDependencies": {
+    "eslint": "^8.32.0",
+    "eslint-config-next": "^13.1.2",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "lint-staged": "^13.1.0",
     "npm-run-all": "^4.1.5",
     "prettier": "^2.8.3",
@@ -42,17 +42,6 @@
   },
   "volta": {
     "node": "16.19.0"
-  },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix --quiet"
-    ],
-    "*.{css,scss}": [
-      "stylelint --fix --quiet"
-    ],
-    "*.json": [
-      "prettier --write --loglevel=error"
-    ]
   },
   "simple-git-hooks": {
     "pre-commit": "npx lint-staged"
