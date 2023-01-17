@@ -25,7 +25,15 @@ export default function Home({ works }: Props) {
       <Header />
       <main>
         <div className={topStyles.mv}>
-          <div className={topStyles.mv_inner}>
+          <Image
+            src="/img/top/bg_mv.png"
+            alt=""
+            width="960"
+            height="400"
+            quality={90}
+            className={topStyles.mv_image}
+          />
+          <div className={topStyles.mv_textContainer}>
             <h1 className={topStyles.mv_title}>Shiro</h1>
             <p className={topStyles.mv_subtitle}>White flower shop</p>
           </div>
