@@ -9,7 +9,6 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="noindex" />
       </Head>
       <DefaultSeo
         defaultTitle="Shiro"
@@ -21,6 +20,8 @@ export default function App({ Component, pageProps }: AppProps) {
           site_name: "Shiro",
           url: "https://microcms-next-corporate-sample.foolish-pine.com/",
         }}
+        dangerouslySetAllPagesToNoIndex={true} // TODO: サイト本番公開時に削除する
+        dangerouslySetAllPagesToNoFollow={true} // TODO: サイト本番公開時に削除する
       />
       <Component {...pageProps} />
     </>
