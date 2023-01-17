@@ -1,0 +1,77 @@
+/* ----------------------------------
+	work
+------------------------------------ */
+@use "@/styles/global" as *;
+
+.work {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  background: linear-gradient($c_white 70%, $c_gray2 30%);
+}
+
+.work_inner {
+  max-width: 960px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.work_title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: $f_poppins, sans-serif;
+  font-size: rem(36);
+  font-weight: 700;
+  line-height: calc(55 / 36);
+  color: $c_gray;
+  letter-spacing: 0.05em;
+
+  &::after {
+    display: block;
+    width: 40px;
+    height: 1px;
+    margin-top: 23px;
+    content: "";
+    background-color: $c_gray;
+  }
+}
+
+.work_text {
+  margin-top: 32px;
+  font-size: rem(16);
+  line-height: 1.8;
+  color: $c_gray;
+  text-align: center;
+  letter-spacing: 0.09em;
+  appearance: none;
+}
+
+.work_cardUnit {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 120px;
+  column-gap: 120px;
+  margin-top: 40px;
+}
+
+.work_card {
+  max-width: 420px;
+}
+
+.work_card:nth-child(2n) {
+  position: relative;
+  top: 120px;
+}
+
+.work_card_image {
+  object-fit: cover;
+  aspect-ratio: 1;
+}
+
+// .work_card_title{
+
+// }
+
+// .work_card_description{
+
+// }

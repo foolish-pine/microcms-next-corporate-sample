@@ -1,0 +1,13 @@
+/* ----------------------------------
+	mobileInlineBlock
+  モバイル表示時のみdisplay: inline-block;を指定する
+------------------------------------ */
+@use "@/styles/global" as *;
+
+.mobileInlineBlock {
+  display: block !important;
+
+  @include mq_max_md {
+    display: inline-block !important;
+  }
+}
