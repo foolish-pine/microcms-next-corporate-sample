@@ -1,6 +1,5 @@
-import Link from "next/link";
+import { Header } from "./components/Header";
 import { client } from "@/libs/client";
-import helperStyles from "@/styles/helpers/helpers.module.scss";
 import type { News } from "@/types/news";
 
 export const getStaticProps = async () => {
@@ -19,15 +18,18 @@ type Props = {
 
 export default function Home({ news }: Props) {
   return (
-    <div>
-      <p className={helperStyles.ttu}>test</p>
-      <ul>
-        {news.map((news) => (
-          <li key={news.id}>
-            <Link href={`/news/${news.id}`}>{news.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      <Header />
+      {/* <div>
+        <p className={helperStyles.ttu}>test</p>
+        <ul>
+          {news.map((news) => (
+            <li key={news.id}>
+              <Link href={`/news/${news.id}`}>{news.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div> */}
+    </>
   );
 }

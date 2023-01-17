@@ -1,0 +1,15 @@
+/* ----------------------------------
+  header
+------------------------------------ */
+@use "@/styles/global" as *;
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  font-size: rem(36);
+  line-height: calc(43 / 36);
+  color: $c_white;
+}
