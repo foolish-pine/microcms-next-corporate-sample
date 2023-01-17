@@ -1,5 +1,5 @@
 import "destyle.css";
-import "@/styles/base/base.scss";
+import "@/styles/base.scss";
 import type { AppProps } from "next/app";
 import Head from "next/head";
 
