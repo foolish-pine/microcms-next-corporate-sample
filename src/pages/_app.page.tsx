@@ -23,7 +23,9 @@ export default function App({ Component, pageProps }: AppProps) {
         dangerouslySetAllPagesToNoIndex={true} // TODO: サイト本番公開時に削除する
         dangerouslySetAllPagesToNoFollow={true} // TODO: サイト本番公開時に削除する
       />
-      <Component {...pageProps} />
+      <main>
+        <Component {...pageProps} />
+      </main>
     </>
   );
 }
