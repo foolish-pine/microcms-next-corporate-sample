@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { client } from "@/libs/client";
 import { Header } from "./components/Header";
+import { client } from "@/libs/client";
 import helperStyles from "@/styles/helpers/helpers.module.scss";
 import topStyles from "@/styles/pages/top/top.module.scss";
 import type { News } from "@/types/news";
@@ -23,7 +23,7 @@ export default function Home({ news }: Props) {
   return (
     <>
       <Header />
-      <main className={topStyles.top_inner}>
+      <main>
         <div className={topStyles.mv}>
           <div className={topStyles.mv_inner}>
             <h1 className={topStyles.mv_title}>Shiro</h1>
@@ -69,8 +69,8 @@ export default function Home({ news }: Props) {
                   height="1240"
                   className={topStyles.work_card_image}
                 />
-                <p className={topStyles.work_card_title}>Gift</p>
-                <p className={topStyles.work_card_description}>
+                <p>Gift</p>
+                <p>
                   花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
                 </p>
               </li>
@@ -82,8 +82,8 @@ export default function Home({ news }: Props) {
                   height="400"
                   className={topStyles.work_card_image}
                 />
-                <p className={topStyles.work_card_title}>Gift</p>
-                <p className={topStyles.work_card_description}>
+                <p>Gift</p>
+                <p>
                   花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
                 </p>
               </li>
@@ -95,8 +95,8 @@ export default function Home({ news }: Props) {
                   height="400"
                   className={topStyles.work_card_image}
                 />
-                <p className={topStyles.work_card_title}>Gift</p>
-                <p className={topStyles.work_card_description}>
+                <p>Gift</p>
+                <p>
                   花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
                 </p>
               </li>
@@ -108,8 +108,8 @@ export default function Home({ news }: Props) {
                   height="400"
                   className={topStyles.work_card_image}
                 />
-                <p className={topStyles.work_card_title}>Gift</p>
-                <p className={topStyles.work_card_description}>
+                <p>Gift</p>
+                <p>
                   花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
                 </p>
               </li>
