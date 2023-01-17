@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { Header } from "./components/Header";
 import { client } from "@/libs/client";
+import { Header } from "@/pages/components/Header";
 import helperStyles from "@/styles/helpers/helpers.module.scss";
 import topStyles from "@/styles/pages/top/top.module.scss";
 import type { News } from "@/types/news";
