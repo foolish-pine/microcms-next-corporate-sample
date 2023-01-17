@@ -3,23 +3,23 @@ import { client } from "@/libs/client";
 import { Header } from "@/pages/components/Header";
 import helperStyles from "@/styles/helpers/helpers.module.scss";
 import topStyles from "@/styles/pages/top/top.module.scss";
-import type { News } from "@/types/news";
+import type { Work } from "@/types/Work";
 
 export const getStaticProps = async () => {
-  const data = await client.get({ endpoint: "news" });
+  const data = await client.get({ endpoint: "works" });
 
   return {
     props: {
-      news: data.contents,
+      works: data.contents,
     },
   };
 };
 
 type Props = {
-  news: News[];
+  works: Work[];
 };
 
-export default function Home({ news }: Props) {
+export default function Home({ works }: Props) {
   return (
     <>
       <Header />
@@ -61,72 +61,25 @@ export default function Home({ news }: Props) {
               一人一人にあったご提案をさせていただきます。
             </p>
             <ul className={topStyles.work_cardUnit}>
-              <li className={topStyles.work_card}>
-                <Image
-                  src="/img/top/bg_mv.png"
-                  alt=""
-                  width="2560"
-                  height="1240"
-                  className={topStyles.work_card_image}
-                />
-                <p>Gift</p>
-                <p>
-                  花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
-                </p>
-              </li>
-              <li className={topStyles.work_card}>
-                <Image
-                  src="/img/top/ph_concept.png"
-                  alt=""
-                  width="960"
-                  height="400"
-                  className={topStyles.work_card_image}
-                />
-                <p>Gift</p>
-                <p>
-                  花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
-                </p>
-              </li>
-              <li className={topStyles.work_card}>
-                <Image
-                  src="/img/top/ph_concept.png"
-                  alt=""
-                  width="960"
-                  height="400"
-                  className={topStyles.work_card_image}
-                />
-                <p>Gift</p>
-                <p>
-                  花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
-                </p>
-              </li>
-              <li className={topStyles.work_card}>
-                <Image
-                  src="/img/top/ph_concept.png"
-                  alt=""
-                  width="960"
-                  height="400"
-                  className={topStyles.work_card_image}
-                />
-                <p>Gift</p>
-                <p>
-                  花束をお送りしたいお相手、伝えたいお気持ちに合わせたプレゼント用花束のアレンジメントをさせていただきます。花言葉などの豆知識もお伝えします。
-                </p>
-              </li>
+              {works.map((work) => (
+                <li className={topStyles.work_card} key={work.id}>
+                  <Image
+                    src={work.image.url}
+                    alt=""
+                    width={work.image.width}
+                    height={work.image.height}
+                    className={topStyles.work_card_image}
+                  />
+                  <p className={topStyles.work_card_title}>{work.title}</p>
+                  <p className={topStyles.work_card_description}>
+                    {work.description}
+                  </p>
+                </li>
+              ))}
             </ul>
           </div>
         </section>
       </main>
-      {/* <div>
-        <p className={helperStyles.ttu}>test</p>
-        <ul>
-          {news.map((news) => (
-            <li key={news.id}>
-              <Link href={`/news/${news.id}`}>{news.title}</Link>
-            </li>
-          ))}
-        </ul>
-      </div> */}
     </>
   );
 }

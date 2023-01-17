@@ -5,8 +5,7 @@
 
 .work {
   padding-top: 80px;
-  padding-bottom: 80px;
-  background: linear-gradient($c_white 70%, $c_gray2 30%);
+  padding-bottom: 220px;
 }
 
 .work_inner {
@@ -43,7 +42,6 @@
   color: $c_gray;
   text-align: center;
   letter-spacing: 0.09em;
-  appearance: none;
 }
 
 .work_cardUnit {
@@ -68,10 +66,18 @@
   aspect-ratio: 1;
 }
 
-// .work_card_title{
+.work_card_title {
+  margin-top: 16px;
+  font-family: $f_poppins, sans-serif;
+  font-size: rem(24);
+  font-weight: 700;
+  line-height: calc(40 / 24);
+  color: $c_gray;
+}
 
-// }
-
-// .work_card_description{
-
-// }
+.work_card_description {
+  font-size: rem(16);
+  line-height: 1.8;
+  color: $c_gray;
+  letter-spacing: 0.09em;
+}
